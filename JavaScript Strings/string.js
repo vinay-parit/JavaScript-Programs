@@ -158,3 +158,15 @@
 //     str1.toLowerCase().split("").sort().join("")
 // );
 
+
+
+// 2. Check whether a character is an alphabet or not
+// Create a function that checks if a character is a letter (A-Z or a-z) or not.
+
+// let char = "A"; // change this to test other characters
+
+// if ((char >= "A" && char <= "Z") || (char >= "a" && char <= "z")) {
+//   console.log(char + " is an alphabet.");
+// } else {
+//   console.log(char + " is NOT an alphabet.");
+// }

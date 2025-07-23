@@ -286,16 +286,14 @@
 //         console.log(arr[i](2,4));
 //  }
 
-
 //Q.14 Global and Local Scope: Create a function scopeDemo with a local variable counter = 0 and a global variable totalProcessed = 0. The function should take an array of numbers, increment the local counter for each positive number, increment the global counter for each negative number, and return both counts using loops.
-
 
 // let arr=[2,3,4,5,-4,-3,-2,-1]
 
 // let totalProcessed = 0
 // function scope(arr){
 //     localcount = 0
-   
+
 //      for (let i = 0; i < arr.length; i++) {
 //        if (arr[i] < 0) {
 //          totalProcessed++;
@@ -304,10 +302,38 @@
 //        }
 //        console.log(i);
 //      }
-//     return [localcount, totalProcessed] 
-// } 
+//     return [localcount, totalProcessed]
+// }
 // console.log(scope(arr));
 
+// Q.17 Callback with Number Validation: Write a function validateAndProcess that takes an array of numbers and a callback function. Use a loop to check each number - if it's a 3-digit number, pass it to the callback; otherwise, skip it. The callback should determine if the number is palindromic.
 
 
-   
+// let arr = [121, 832, 656, 2, 0, 38, 127, 767];
+// let arr1 = [];
+// function validateAndProcess(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     let temp = arr[i];
+//     let count = 0;
+//     let digit;
+//     while (arr[i] > 0) {
+//       digit = arr[i] % 10;
+//       count++;
+//       arr[i] = Math.floor(arr[i] / 10);
+//       if (count === 3) {
+//         arr1.push(temp);
+//       }
+//     }
+//   }
+// }
+// validateAndProcess(arr);
+// console.log(arr1);
+
+// function checkPalindrome(arr1) {
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] % 10 === Math.floor(arr1[i] / 100)) {
+//       console.log("Palindrome", arr1[i]);
+//     }
+//   }
+// }
+// checkPalindrome(arr1);

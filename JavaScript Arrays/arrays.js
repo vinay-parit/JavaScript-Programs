@@ -451,7 +451,7 @@
 //6. All Zeroes to Left and All Ones to Right
 // Brief: Segregate 0s and 1s in a binary array. Detailed: Rearrange an array containing only 0s and 1s such that all 0s appear before all 1s. Use two-pointer technique or counting approach to separate them efficiently. Example: Input: [1, 0, 1, 0, 1, 0] → Output: [0, 0, 0, 1, 1, 1]
 
-// let arr=[1,0,1,0,1,0] 
+// let arr=[1,0,1,0,1,0]
 // let i=0, j=0
 
 // for(;i<arr.length;){
@@ -465,18 +465,59 @@
 // }
 // console.log(arr);
 
-
-
-
-
-
 // ==================== Q.8 Array Right Rotation by 1
 // Brief: Rotate array right by one position. Detailed: Move each element one position to the right and place the last element at the first position. Store the last element temporarily, shift all other elements right by one position, then place the stored element at the beginning. Example: Input: [1, 2, 3, 4, 5] → Output: [5, 1, 2, 3, 4] ============================
 
 // let arr = [1, 2, 3, 4, 5, 6];
 // // let i = 0;
 // // let j = arr.length - 1;
-// let last = arr.pop(arr.length-1) 
+// let last = arr.pop(arr.length-1)
 //      arr.unshift(last)
 //     console.log(arr);
 // console.log(last);
+
+// 11. Array Left Rotation by K Elements (Using Another Array)
+// Brief: Rotate array left by K positions using extra space. Detailed: Create a new array and place elements in their rotated positions. Elements from index K to end go to beginning of new array, and elements from start to K-1 go to the end of new array. Example: Input: [1, 2, 3, 4, 5], K=2 → Output: [3, 4, 5, 1, 2]
+
+// let arr = [1, 2, 3, 4, 5];
+// let k = 2;
+
+// function leftRotate(arr, k) {
+//   let result = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     result[i] = arr[(i + k) % arr.length];
+//   }
+
+//   return result;
+// }
+
+// console.log(leftRotate(arr, k));
+
+
+
+// 17. Find Smallest and Largest Element in an Array
+// Brief: Find both minimum and maximum elements in single traversal. Detailed: Traverse the array once and maintain both minimum and maximum values. Compare each element with current min and max values and update accordingly. This reduces the number of comparisons compared to finding them separately. Example: Input: [3, 7, 1, 9, 2] → Output: Min=1, Max=9
+
+// let arr = [3, 7, 1, 9, 2];
+
+// function findMinMax(arr) {
+
+//     let max = arr[0];
+//     let min = arr[0];
+
+    
+//     for (let i = 1; i < arr.length; i++) {
+//       if (arr[i] < min) {
+//         min = arr[i];
+//       } else if (arr[i] > max) {
+//         max = arr[i];
+//       }
+//     }
+
+
+// }
+// console.log(max,min);
+
+ 
+   
