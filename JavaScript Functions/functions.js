@@ -250,13 +250,40 @@
 
 // console.log(num);
 
+// Q.2 Function Expression: Create a function expression called findPrimeNumbers that takes a number limit and returns an array of all prime numbers up to that limit using nested loops.
+
+
+// const findPrimeNumbers = function (limit) {
+//   let primes = [];
+
+//   for (let i = 2; i <= limit; i++) {
+//     let count = 0;
+
+//     for (let j = 1; j <= i; j++) {
+//       if (i % j === 0) {
+//         count++;
+//       }
+//     }
+
+//     if (count === 2) {
+//       primes.push(i);
+//     }
+//   }
+
+//   return primes;
+// };
+
+// console.log(findPrimeNumbers(10));  
+
+
+
 //Q.5 Arrow Function with Implicit Return: Write an arrow function that takes an array of numbers and returns the count of numbers divisible by both 3 and 5 using filter and implicit return.
 
 // let numbers= [9,12,10,15,20,25,30,]
 // let divisible= numbers.filter(num => num % 3==0 && num % 5==0 )
 // console.log(divisible);
 
-// IIFE: Create an IIFE that takes a number as parameter and prints all its divisors using a for loop, then immediately invoke it with the number 24.
+// Q.8 IIFE: Create an IIFE that takes a number as parameter and prints all its divisors using a for loop, then immediately invoke it with the number 24.
 
 //  (function(number){
 

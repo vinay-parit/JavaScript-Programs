@@ -494,8 +494,6 @@
 
 // console.log(leftRotate(arr, k));
 
-
-
 // 17. Find Smallest and Largest Element in an Array
 // Brief: Find both minimum and maximum elements in single traversal. Detailed: Traverse the array once and maintain both minimum and maximum values. Compare each element with current min and max values and update accordingly. This reduces the number of comparisons compared to finding them separately. Example: Input: [3, 7, 1, 9, 2] → Output: Min=1, Max=9
 
@@ -506,7 +504,6 @@
 //     let max = arr[0];
 //     let min = arr[0];
 
-    
 //     for (let i = 1; i < arr.length; i++) {
 //       if (arr[i] < min) {
 //         min = arr[i];
@@ -515,9 +512,52 @@
 //       }
 //     }
 
-
 // }
 // console.log(max,min);
 
- 
-   
+// 14. Binary Search on Array
+// Brief: Search for an element using binary search. Detailed: Search for a target element in a sorted array by repeatedly dividing search interval in half. Compare target with middle element and eliminate half of remaining elements. Time complexity: O(log n). Array must be sorted. Example: Input: [1, 2, 3, 4, 5], Target=3 → Output: 2
+
+// const arr = [1, 2, 3, 4, 5, 6];
+// const target = 4;
+
+// function binarySearch(arr, target) {
+//   let start = 0;
+//   let end = arr.length - 1;
+
+//   while (start <= end) {
+//     let mid = Math.floor((start + end) / 2);
+
+//     if (arr[mid] === target) {
+//       return mid;
+//     }
+
+//     if (arr[mid] < target) {
+//       start = mid + 1;
+//     } else {
+//       end = mid - 1;
+//     }
+//   }
+// }
+// console.log(binarySearch(arr, target));
+
+
+
+// 20. Sort First Half Ascending, Second Half Descending
+// Brief: Sort array with different orders for each half. Detailed: Divide array into two halves. Sort first half in ascending order and second half in descending order. If array has odd length, the middle element can be included in either half. Maintain the division point clearly. Example: Input: [4, 2, 8, 1, 9, 5] → Output: [2, 4, 8, 9, 5, 1]
+
+// let arr = [4, 2, 8, 1, 9, 5];
+
+// let mid = Math.floor(arr.length / 2);
+
+// let first = arr.slice(0, mid).sort((a, b) => a - b);
+// let second = arr.slice(mid).sort((a, b) => b - a);
+
+// let result = first.concat(second);
+
+// console.log(result);
+
+
+// 23. Sorting Elements by Frequency
+// Brief: Sort array elements based on their occurrence frequency. Detailed: First count frequency of each element, then sort elements based on their frequency in descending order. Elements with same frequency can be sorted by their values. Use custom comparator for sorting. Example: Input: [1, 2, 2, 3, 3, 3] → Output: [3, 3, 3, 2, 2, 1]
+

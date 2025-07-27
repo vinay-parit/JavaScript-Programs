@@ -158,8 +158,6 @@
 //     str1.toLowerCase().split("").sort().join("")
 // );
 
-
-
 // 2. Check whether a character is an alphabet or not
 // Create a function that checks if a character is a letter (A-Z or a-z) or not.
 
@@ -170,3 +168,73 @@
 // } else {
 //   console.log(char + " is NOT an alphabet.");
 // }
+
+// 5. Toggle each character in a string
+// Convert uppercase letters to lowercase and lowercase letters to uppercase in a string.
+
+
+// let name = "ViNaY";
+// let toggled = "";
+
+// for (let i = 0; i < name.length; i++) {
+//   let char = name[i];
+//   if (char >= 'A' && char <= 'Z') {
+//     toggled += char.toLowerCase();
+//   } 
+//   else if (char >= 'a' && char <= 'z') {
+//     toggled += char.toUpperCase();
+//   }
+// }
+
+// console.log(toggled); 
+
+
+// 8. Check if the given string is palindrome or not
+// Determine whether a string reads the same forwards and backwards.
+
+// function checkPalindrome(str) {
+//   const reversed = str.split("").reverse().join("");
+//   if (str === reversed) {
+//     console.log("It's a palindrome");
+//   } else {
+//     console.log("It's not a palindrome");
+//   }
+// }
+
+// checkPalindrome("racecar");
+
+
+// 11. Remove spaces from a string
+// Create a function that removes all whitespace characters from a string.
+
+// let input = "   Hello World   ";
+
+// function removeSpaces(str) {
+//   return str.trim();
+// }
+
+// console.log(removeSpaces(input));
+
+
+
+// 14. Capitalize the first and last character of each word of a string
+// Convert the first and last character of every word in a string to uppercase.
+
+// let str = "hello world from javascript";
+// let words = str.split(" ");
+// let result = [];
+
+// for (let word of words) {
+//   if (word.length === 1) {
+    
+//     result.push(word.toUpperCase());
+//   } else {
+//     let first = word[0].toUpperCase();
+//     let last = word[word.length - 1].toUpperCase();
+//     let middle = word.slice(1, -1);
+//     result.push(first + middle + last);
+//   }
+// }
+
+// let finalStr = result.join(" ");
+// console.log(finalStr); 
