@@ -290,16 +290,142 @@ ABCDE
 // Question 20:
 
 //
-//  1
-// 22
-// 333
-// 4444;
-//55555;
-
+//    1
+//   22
+//  333
+// 4444
+//55555
 
 // for (let i = 1; i <= 5; i++) {
 //   for (let j = 1; j <= i; j++) {
 //     process.stdout.write(i+"");
 //   }
 //   console.log();
+// }
+
+//  *  *  *  *  *
+//  *           *
+//  *           *
+//  *           *
+//  *  *  *  *  *
+
+// for (let i = 1; i <= 5; i++) {
+//   for (let j = 1; j <= 5; j++) {
+//     if (i === 1 || j === 1 || i === 5 || j === 5) {
+//       process.stdout.write(" * ");
+//     } else {
+//       process.stdout.write("   ");
+//     }
+//   }
+//   console.log();
+// }
+
+// for (let i = 1; i <= 5; i++) {
+//   // Print spaces
+//   for (let space = 1; space <= 5 - i; space++) {
+//     process.stdout.write(" ");
+//   }
+//   // Print stars
+//   for (let star = 1; star <= 2 * i - 1; star++) {
+//     if (i % 2 != 0 && star % 2 != 0) {
+//       process.stdout.write("*");
+//     } else {
+//       process.stdout.write(" ");
+//     }
+//   }
+//   process.stdout.write("\n");
+// }
+
+//     *
+//    * *
+//   * * *
+//  * * * *
+// * * * * *
+
+// for (let i = 1; i <= 5; i++) {
+//   let spaces = " ".repeat(5 - i);
+//   let stars = "* ".repeat(i); // repeat stars with space, then trim end
+//   console.log(spaces + stars);
+// }
+
+// for (let i = 1; i <= 4; i++) {
+//   for (let space = 1; space <= 4 - i; space++) {
+//     process.stdout.write(" ");
+//   }
+//   for (let star = 1; star <= 2 * i - 1; star++) {
+//     process.stdout.write("*");
+//   }
+//   process.stdout.write("\n");
+// }
+
+// // Lower half
+// for (let i = 4 - 1; i >= 1; i--) {
+//   for (let space = 1; space <= 4 - i; space++) {
+//     process.stdout.write(" ");
+//   }
+//   for (let star = 1; star <= 2 * i - 1; star++) {
+//     process.stdout.write("*");
+//   }
+//   process.stdout.write("\n");
+// }
+
+// Question 23:
+//     1
+//    1 2
+//   1 2 3
+//  1 2 3 4
+// 1 2 3 4 5
+//  1 2 3 4
+//   1 2 3
+//    1 2
+//     1
+
+// Top half including the middle line
+// for (let i = 1; i <= 5; i++) {
+//   // Print spaces
+//   for (let space = 1; space <= 5 - i; space++) {
+//     process.stdout.write(" ");
+//   }
+//   // Print numbers from 1 to i
+//   for (let j = 1; j <= i; j++) {
+//     process.stdout.write(j + " ");
+//   }
+//   process.stdout.write("\n");
+// }
+
+// // Bottom half
+// for (let i = 4; i >= 1; i--) {
+//   // Print spaces
+//   for (let space = 1; space <= 5 - i; space++) {
+//     process.stdout.write(" ");
+//   }
+//   // Print numbers from 1 to i
+//   for (let j = 1; j <= i; j++) {
+//     process.stdout.write(j + " ");
+//   }
+//   process.stdout.write("\n");
+// }
+
+
+
+// Question 26:
+// * * * * *
+// # # # # #
+// * * * * *
+// # # # # #
+// * * * * *
+
+
+// for (let i = 1; i <=5; i++) {
+//     for (let j = 1; j <=5; j++){
+        
+    
+//     if(i%2==0){
+//       process.stdout.write(" # ")
+//     }
+//     else{
+//       process.stdout.write(" * ");
+//     }
+//   }
+//     console.log();
 // }

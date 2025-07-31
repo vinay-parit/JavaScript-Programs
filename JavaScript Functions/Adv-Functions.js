@@ -62,11 +62,68 @@
 // let ans2 = counter();
 // console.log(ans2());
 
-
 //Q. 22 Implement a function that limits how many times another function can be called (Closure + HOF)
 
-function limiter(){
+// function limitCalls(fn, limit) {
+//   let count = 1;
+//   return function (data) {
+//     if (count <= limit) {
+//       count++;
+//       return fn(data);
+//     } else {
+//       console.log("limit exceeded");
+//     }
+//   };
+// }
+// let logName = (name) => console.log(`hello, ${name}  `);
 
+// let ans = limitCalls(logName, 3);
+// ans("Vinay p");
+// ans("Vinay B");
+// ans("Akash");
+// ans("Akash");
+
+
+
+// Q. 24 Implement a function that returns a function with a preset greeting (Closure).
+// function createGreeter(greeting) {
+//   return function (name) {
+//     console.log(`${greeting}, ${name}!`);
+//   };
+// }
+
+// // Example usage:
+// const greetHello = createGreeter("Hello");
+// greetHello("Jane"); // Hello, Jane!
+
+// Q.25 Implement a function that takes a callback and only executes it once (HOF + Closure).
+// function once(callback) {
+//   let called = false;
+//   return function (...args) {
+//     if (!called) {
+//       called = true;
+//       return callback(...args);
+//     }
+//   };
+// }
+
+// // Example usage:
+// const init = once(() => console.log("Initialized"));
+// init(); // Initialized
+// init(); // Nothing
+
+// Q.26 Implement a function that throttles another function (HOF + Closures).
+function throttle(fn, limitMs) {
+  let lastCall = 0;
+  return function (...args) {
+    const now = Date.now();
+    if (now - lastCall >= limitMs) {
+      lastCall = now;
+      return fn(...args);
+    }
+  };
 }
 
-limiter()
+// Example usage:
+const throttledLog = throttle(() => console.log("Throttled!"), 2000);
+// setInterval(throttledLog, 500); // Will log only once every 2 seconds// 
