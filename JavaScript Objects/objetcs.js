@@ -266,7 +266,6 @@
 //   console.log(`We have ${inventory[item]} ${item}`);
 // });
 
-
 //Example 3: Object.entries() Method
 // const weather = {
 //   temperature: 72,
@@ -279,7 +278,6 @@
 // });
 // Output: temperature: 72, humidity: 65, windSpeed: 12, pressure: 1013
 
-
 //Example 1: Array with Object Properties
 // const fruits = ["apple", "banana", "orange"];
 // fruits.origin = "local farm";
@@ -289,7 +287,6 @@
 // console.log(fruits.length); // 3 (only counts indexed elements)
 // console.log(fruits.origin); // "local farm"
 
-
 // Example 2: Array Object Key Iteration
 
 // const colors = ["red", "green", "blue"];
@@ -298,7 +295,6 @@
 
 // console.log(colors);
 
-
 // for (let key in colors) {
 //   console.log(`${key}: ${colors[key]}`);
 // }
@@ -306,30 +302,91 @@
 
 // console.log(Object.keys(colors)); // ["0", "1", "2", "favorite", "total"]
 
+// function getPropertyName(type)
+// {
+//   return `${type}Count`;
+// }
 
-function getPropertyName(type)
+// const statistics = {
+//   [getPropertyName("visitor")]: 1250,
+//   [getPropertyName("page")]: 45,
+//   [getPropertyName("error")]: 3
+// };
+// console.log(statistics); // { visitorCount: 1250, pageCount: 45, errorCount: 3 }
+
+//Spread Operator in Objects
+// let arr = [1,23,4,5,66]
+// let arr2 = arr
+// let arr1=[...arr]
+// console.log(arr, arr1);
+
+// const basicInfo = {
+//   name: "David",
+//   age: 30,
+// };
+// const contactInfo = {
+//   email: "david@example.com",
+//   phone: "555-1234",
+// };
+// const preferences = {
+//   theme: "dark",
+//   notifications: true,
+// };
+// const completeProfile = {
+//   ...basicInfo,
+//   name2: "vinay",
+//   ...contactInfo,
+//   ...preferences,
+// };
+// console.log(completeProfile);
+// { name: "David", age: 30, email: "david@example.com", phone: "555-1234", theme: "dark", notifications: true }
 
 
+// const originalProduct = {
+//   id: 1,
+//   name: "Laptop",
+//   price: 999,
+//   category: "Electronics"
+// };
+// const discountedProduct = {
+//   ...originalProduct,
+//   price: 799,
+//   onSale: true,
+//   discount: "20% off"
+// };
+// console.log(discountedProduct); 
+// { id: 1, name: "Laptop", price: 799, category: "Electronics", onSale: true, discount: "20% off" }
+
+// const defaultSettings = {
+//   volume: 50,
+//   brightness: 75,
+//   autoSave: true,
+//   theme: "light"
+// };
+// const userSettings = {
+//   volume: 80,
+//   theme: "dark"
+// };
+// const finalSettings = { ...defaultSettings,...userSettings, lastUpdated: new Date() };
+// console.log(finalSettings); 
+// { volume: 80, brightness: 75, autoSave: true, theme: "dark", lastUpdated: [current date] }
 
 
+//Object Destructring
 
+// const student = {
+//   name: "Lisa",
+//   grade: "A",
+//   subject: "Mathematics",
+//   score: 95,
+//   passed: true
+// };
+// const { passed } = student;
+// console.log(name); // "Lisa"
+// console.log(grade); // "A"
+// console.log(score); // 95
 
+// console.log(passed);
+// console.log(student);
 
-
-
-
-
-
-
-
-{
-  return `${type}Count`;
-}
-
-const statistics = {
-  [getPropertyName("visitor")]: 1250,
-  [getPropertyName("page")]: 45,
-  [getPropertyName("error")]: 3
-};
-console.log(statistics); // { visitorCount: 1250, pageCount: 45, errorCount: 3 }
 
