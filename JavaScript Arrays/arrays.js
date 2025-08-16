@@ -561,3 +561,11 @@
 // 23. Sorting Elements by Frequency
 // Brief: Sort array elements based on their occurrence frequency. Detailed: First count frequency of each element, then sort elements based on their frequency in descending order. Elements with same frequency can be sorted by their values. Use custom comparator for sorting. Example: Input: [1, 2, 2, 3, 3, 3] → Output: [3, 3, 3, 2, 2, 1]
 
+let fruits = ["apple", "banana", "cherry", "date"];
+let [first, second, third, four] = fruits;
+
+console.log(first); // "apple"
+console.log(second); // "banana"
+console.log(third); // "cherry"
+console.log(four); // "date"
+
